@@ -12,10 +12,11 @@ interface NavLinkCompatProps extends Omit<NavLinkProps, "className"> {
   disabled?: boolean;
   variant?: "default" | "ghost" | "outline";
   size?: "sm" | "md" | "lg";
+  transitionDuration?: "fast" | "normal" | "slow";
 }
 
 /**
- * Enhanced NavLink component with additional styling and state support
+ * Enhanced NavLink component with smooth transitions and additional styling
  *
  * @param className - Base CSS classes
  * @param activeClassName - Classes applied when link is active
@@ -26,6 +27,7 @@ interface NavLinkCompatProps extends Omit<NavLinkProps, "className"> {
  * @param disabled - Whether the link is disabled
  * @param variant - Visual variant of the link
  * @param size - Size variant of the link
+ * @param transitionDuration - Speed of transitions
  */
 const NavLink = forwardRef<HTMLAnchorElement, NavLinkCompatProps>(
   ({
@@ -38,6 +40,7 @@ const NavLink = forwardRef<HTMLAnchorElement, NavLinkCompatProps>(
     disabled = false,
     variant = "default",
     size = "md",
+    transitionDuration = "normal",
     to,
     onClick,
     ...props
@@ -50,20 +53,29 @@ const NavLink = forwardRef<HTMLAnchorElement, NavLinkCompatProps>(
       onClick?.(event);
     };
 
+    const getTransitionClasses = () => {
+      const durations = {
+        fast: "duration-150 ease-out",
+        normal: "duration-200 ease-in-out",
+        slow: "duration-300 ease-in-out",
+      };
+      return `transition-all ${durations[transitionDuration]}`;
+    };
+
     const getVariantClasses = () => {
       const variants = {
-        default: "text-foreground hover:text-primary transition-colors",
-        ghost: "text-muted-foreground hover:text-foreground hover:bg-accent transition-colors",
-        outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground transition-colors",
+        default: "text-foreground hover:text-primary hover:scale-105 active:scale-95",
+        ghost: "text-muted-foreground hover:text-foreground hover:bg-accent hover:shadow-sm active:shadow-inner",
+        outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground hover:border-accent-foreground hover:shadow-md active:shadow-sm",
       };
       return variants[variant];
     };
 
     const getSizeClasses = () => {
       const sizes = {
-        sm: "px-2 py-1 text-sm",
-        md: "px-3 py-2 text-base",
-        lg: "px-4 py-3 text-lg",
+        sm: "px-2 py-1 text-sm rounded-sm",
+        md: "px-3 py-2 text-base rounded-md",
+        lg: "px-4 py-3 text-lg rounded-lg",
       };
       return sizes[size];
     };
@@ -75,10 +87,14 @@ const NavLink = forwardRef<HTMLAnchorElement, NavLinkCompatProps>(
         onClick={handleClick}
         className={({ isActive, isPending }) =>
           cn(
-            // Base styles
-            "inline-flex items-center justify-center rounded-md font-medium",
+            // Base styles with smooth transitions
+            "inline-flex items-center justify-center font-medium",
             "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
             "disabled:pointer-events-none disabled:opacity-50",
+            "transform-gpu", // Hardware acceleration for smoother animations
+
+            // Smooth transitions
+            getTransitionClasses(),
 
             // Variant and size styles
             getVariantClasses(),
@@ -89,11 +105,14 @@ const NavLink = forwardRef<HTMLAnchorElement, NavLinkCompatProps>(
             isActive && activeClassName,
             isPending && pendingClassName,
             disabled && disabledClassName,
+
+            // Interactive states with smooth transitions
+            "hover:transform hover:scale-105 active:transform active:scale-95",
             hoverClassName && `hover:${hoverClassName}`,
             focusClassName && `focus:${focusClassName}`,
 
             // Disabled state
-            disabled && "pointer-events-none opacity-50"
+            disabled && "pointer-events-none opacity-50 cursor-not-allowed"
           )
         }
         aria-disabled={disabled}
