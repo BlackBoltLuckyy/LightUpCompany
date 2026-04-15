@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, CalendarCheck } from "lucide-react";
 
-const WHATSAPP_URL = "https://wa.me/5500000000000?text=Olá! Quero transformar minha empresa com a Light Up.";
+const WHATSAPP_URL = "https://wa.me/5500000000000?text=Olá! Quero transformar minha empresa com a LightUpCompany.";
 
 const CTASection = () => {
   return (
@@ -23,7 +23,7 @@ const CTASection = () => {
             <span className="text-gradient">próximo nível</span>?
           </h2>
           <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
-            Fale com a Light Up e descubra como transformar sua operação em uma máquina de crescimento.
+            Fale com a LightUpCompany e descubra como transformar sua operação em uma máquina de crescimento.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="whatsapp" size="lg" asChild>

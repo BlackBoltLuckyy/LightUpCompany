@@ -3,14 +3,14 @@ import { Button } from "@/components/ui/button";
 import { Users, Bot, MessageCircle, Gift, ArrowRight } from "lucide-react";
 
 const steps = [
-  { icon: Users, text: "Um cliente Light Up indica 3 empresas" },
+  { icon: Users, text: "Um cliente LightUpCompany indica 3 empresas" },
   { icon: MessageCircle, text: "As empresas entram em contato via WhatsApp" },
   { icon: Bot, text: "Atendimento automatizado pelo agente LUP (IA)" },
   { icon: ArrowRight, text: "Equipe apresenta soluções personalizadas" },
   { icon: Gift, text: "Cliente indicador recebe benefícios exclusivos" },
 ];
 
-const WHATSAPP_URL = "https://wa.me/5500000000000?text=Quero participar do programa de indicações da Light Up!";
+const WHATSAPP_URL = "https://wa.me/5500000000000?text=Quero participar do programa de indicações da LightUpCompany!";
 
 const Referral = () => {
   return (
@@ -39,7 +39,7 @@ const Referral = () => {
           <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-card border border-primary/20 mb-12 text-sm font-medium">
             <span>Indicação</span>
             <span className="text-primary">+</span>
-            <span>Serviços Light Up</span>
+            <span>Serviços LightUpCompany</span>
             <span className="text-primary">=</span>
             <span className="text-gradient font-bold">Crescimento Escalável</span>
           </div>

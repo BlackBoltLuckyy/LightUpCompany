@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, ArrowRight } from "lucide-react";
 
-const WHATSAPP_URL = "https://wa.me/5500000000000?text=Olá! Quero crescer minha empresa com a Light Up.";
+const WHATSAPP_URL = "https://wa.me/5500000000000?text=Olá! Quero crescer minha empresa com a LightUpCompany.";
 
 const Hero = () => {
   return (
@@ -41,7 +41,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          A Light Up une marketing, tecnologia, automação e inteligência artificial para atrair clientes, vender mais e escalar negócios.
+          A LightUpCompany une marketing, tecnologia, automação e inteligência artificial para atrair clientes, vender mais e escalar negócios.
         </motion.p>
 
         <motion.div

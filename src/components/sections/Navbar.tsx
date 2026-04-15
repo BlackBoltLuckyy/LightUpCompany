@@ -10,7 +10,7 @@ const navItems = [
   { label: "Contato", href: "#contato" },
 ];
 
-const WHATSAPP_URL = "https://wa.me/5500000000000?text=Olá! Quero falar com um especialista da Light Up.";
+const WHATSAPP_URL = "https://wa.me/5500000000000?text=Olá! Quero falar com um especialista da LightUpCompany.";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +19,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 glass">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
         <a href="#inicio" className="text-xl font-heading font-bold text-gradient">
-          Light Up
+          LightUpCompany
         </a>
 
         {/* Desktop */}

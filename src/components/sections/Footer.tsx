@@ -4,7 +4,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 text-center">
         <p className="text-sm text-muted-foreground">
           © {new Date().getFullYear()}{" "}
-          <span className="text-gradient font-semibold">Light Up</span>. Todos os direitos reservados.
+          <span className="text-gradient font-semibold">LightUpCompany</span>. Todos os direitos reservados.
         </p>
       </div>
     </footer>

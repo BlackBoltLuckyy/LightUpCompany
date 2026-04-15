@@ -20,7 +20,7 @@ const Differentials = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-sm font-medium text-primary mb-2 block">Por que a Light Up</span>
+          <span className="text-sm font-medium text-primary mb-2 block">Por que a LightUpCompany</span>
           <h2 className="text-3xl md:text-5xl font-heading font-bold">
             Nossos <span className="text-gradient">diferenciais</span>
           </h2>

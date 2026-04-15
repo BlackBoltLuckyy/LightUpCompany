@@ -1,4 +1,4 @@
-# Light Up Growth Engine
+# LightUpCompany
 
 A modern React application built with TypeScript, Vite, and Tailwind CSS for business growth and development.
 
