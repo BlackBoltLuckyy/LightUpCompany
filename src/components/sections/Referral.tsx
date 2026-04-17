@@ -10,7 +10,7 @@ const steps = [
   { icon: Gift, text: "Cliente indicador recebe benefícios exclusivos" },
 ];
 
-const WHATSAPP_URL = "https://wa.me/5500000000000?text=Quero participar do programa de indicações da LightUpCompany!";
+const WHATSAPP_URL = "https://wa.me/5519995829205?text=Quero participar do programa de indicações da LightUpCompany!";
 
 const Referral = () => {
   return (

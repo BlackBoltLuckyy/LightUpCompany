@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, CalendarCheck } from "lucide-react";
 
-const WHATSAPP_URL = "https://wa.me/5500000000000?text=Olá! Quero transformar minha empresa com a LightUpCompany.";
+const WHATSAPP_URL = "https://wa.me/5519995829205?text=Olá! Quero transformar minha empresa com a LightUpCompany.";
 
 const CTASection = () => {
   return (

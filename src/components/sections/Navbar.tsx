@@ -10,7 +10,7 @@ const navItems = [
   { label: "Contato", href: "#contato" },
 ];
 
-const WHATSAPP_URL = "https://wa.me/5500000000000?text=Olá! Quero falar com um especialista da LightUpCompany.";
+const WHATSAPP_URL = "https://wa.me/5519995829205?text=Olá! Quero falar com um especialista da LightUpCompany.";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
